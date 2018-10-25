@@ -49,7 +49,7 @@ class FortnoxGatewayFactory extends GatewayFactory
                 $config->validateNotEmpty($config['payum.required_options']);
 
                 $httpClientConfigurator = new HttpClientConfigurator(
-                    $config['payum.http_client'],
+                    null, //$config['payum.http_client'],
                     new ModelHydrator(),
                     new RequestBuilder($config['httplug.message_factory'])
                 );
